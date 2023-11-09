@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e9ca0aef7a226aa5fe79dc887cb7ebc6 {
+                    position: relative;
+                    width: 800.0px;
+                    height: 700.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-ripple-effect@1.0.5/dist/ripple.min.css"/>
+</head>
+<body>
+    
+    
+             <h3 align="left" style="font-size:20px"><b>Seattle Starbucks Stores Map by Ownership Type</b></h3>
+             
+    
+            <div class="folium-map" id="map_e9ca0aef7a226aa5fe79dc887cb7ebc6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e9ca0aef7a226aa5fe79dc887cb7ebc6 = L.map(
+                "map_e9ca0aef7a226aa5fe79dc887cb7ebc6",
+                {
+                    center: [47.5138, -122.3321],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_e9ca0aef7a226aa5fe79dc887cb7ebc6);
+
+            
+
+        
+    
+            var tile_layer_2f88a83f2104f4e3a9d49260e1de53a6 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_2f88a83f2104f4e3a9d49260e1de53a6.addTo(map_e9ca0aef7a226aa5fe79dc887cb7ebc6);
+    
+            var marker_cluster_30762474784e3bb04b394e7f97b72370 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_509adeee2bd8dc3bcb213f4c08f69e2e = L.marker(
+                [47.57883, -122.411157],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_7768f63b6ac9d820b9e69f007e6c9a09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_509adeee2bd8dc3bcb213f4c08f69e2e.setIcon(icon_7768f63b6ac9d820b9e69f007e6c9a09);
+        
+    
+            marker_509adeee2bd8dc3bcb213f4c08f69e2e.bindTooltip(
+                `<div>
+                     Store Name: <b>Alki Ave.</b><br>Address: 2742 Alki Ave SW, Seattle, WA 98116<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b811ace1608ebe184bc8b717067ddd4 = L.marker(
+                [47.639717, -122.399802],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_61aa0c75a69f8cdf6a136cb34463a34d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4b811ace1608ebe184bc8b717067ddd4.setIcon(icon_61aa0c75a69f8cdf6a136cb34463a34d);
+        
+    
+            marker_4b811ace1608ebe184bc8b717067ddd4.bindTooltip(
+                `<div>
+                     Store Name: <b>Magnolia</b><br>Address: 3300 W. McGraw St., 100, Seattle, WA 98199<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e9a4bbf427ed71f4866572ac3ea31759 = L.marker(
+                [47.579567, -122.38632],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_cd47364148fb8f29bf83bdb1180d3d30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_e9a4bbf427ed71f4866572ac3ea31759.setIcon(icon_cd47364148fb8f29bf83bdb1180d3d30);
+        
+    
+            marker_e9a4bbf427ed71f4866572ac3ea31759.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-West Seattle #2932</b><br>Address: 2622 California Ave SW, Seattle, WA 98116<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec4e197071d87090e0328a435d680d46 = L.marker(
+                [47.581034, -122.384074],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_11e6430740ef640ad9848cb8cc925946 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ec4e197071d87090e0328a435d680d46.setIcon(icon_11e6430740ef640ad9848cb8cc925946);
+        
+    
+            marker_ec4e197071d87090e0328a435d680d46.bindTooltip(
+                `<div>
+                     Store Name: <b>West Seattle</b><br>Address: 4101 SW Admiral Way, Seattle, WA 98116<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_937ea97309711d972edd238be38fc8fc = L.marker(
+                [47.670638, -122.387273],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_a5851c334c4de47f58998f5c321ca086 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_937ea97309711d972edd238be38fc8fc.setIcon(icon_a5851c334c4de47f58998f5c321ca086);
+        
+    
+            marker_937ea97309711d972edd238be38fc8fc.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - Seattle/Ballard #891</b><br>Address: 2237 NW 58th ST, Nordstrom Building, Seattle, WA 98107<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_354cb587075db438c49481a1c0d4ca9b = L.marker(
+                [47.668875, -122.385],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_eec5a56164759d7402d046d3c0efac90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_354cb587075db438c49481a1c0d4ca9b.setIcon(icon_eec5a56164759d7402d046d3c0efac90);
+        
+    
+            marker_354cb587075db438c49481a1c0d4ca9b.bindTooltip(
+                `<div>
+                     Store Name: <b>Ballard</b><br>Address: 2200 NW Market Street, Seattle, WA 98107<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b9548c819f4b29bf4fb5193abe23b0a9 = L.marker(
+                [47.62982, -122.372098],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_822bf2c3530700cb7932d160631f7afe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b9548c819f4b29bf4fb5193abe23b0a9.setIcon(icon_822bf2c3530700cb7932d160631f7afe);
+        
+    
+            marker_b9548c819f4b29bf4fb5193abe23b0a9.bindTooltip(
+                `<div>
+                     Store Name: <b>1144 Elliott Ave W - Seattle</b><br>Address: 1144  Elliott Avenue West, Seattle, WA 98119<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67b9667a5ffab72f2e1ea705b3e600ef = L.marker(
+                [47.560942, -122.386586],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_c598fc74284ee20152b84125e38c0691 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_67b9667a5ffab72f2e1ea705b3e600ef.setIcon(icon_c598fc74284ee20152b84125e38c0691);
+        
+    
+            marker_67b9667a5ffab72f2e1ea705b3e600ef.bindTooltip(
+                `<div>
+                     Store Name: <b>The Junction - California & Alaska</b><br>Address: 4233 SW Alaska St., Seattle, WA 98116<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a683adb5a45d56f3640cb46ebc8587d8 = L.marker(
+                [47.561286, -122.384684],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_c3308da91c3f4caaee5667318d8597ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_a683adb5a45d56f3640cb46ebc8587d8.setIcon(icon_c3308da91c3f4caaee5667318d8597ac);
+        
+    
+            marker_a683adb5a45d56f3640cb46ebc8587d8.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC-West Seattle, WA #883</b><br>Address: 4550 42nd Ave SW, Seattle, WA 98116<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35d8b866f6f416b9f7707d27e7addee2 = L.marker(
+                [47.55983, -122.384892],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_f098338e0a4a36846fc54b696262f540 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_35d8b866f6f416b9f7707d27e7addee2.setIcon(icon_f098338e0a4a36846fc54b696262f540);
+        
+    
+            marker_35d8b866f6f416b9f7707d27e7addee2.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Seattle #1062</b><br>Address: 4754 42nd Ave SW, Seattle, WA 98116<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05e32a2ab96db109be14cc9eb266c1e1 = L.marker(
+                [47.666939, -122.375908],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_8d545e0ff676c858fdc771745f7e5c8e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_05e32a2ab96db109be14cc9eb266c1e1.setIcon(icon_8d545e0ff676c858fdc771745f7e5c8e);
+        
+    
+            marker_05e32a2ab96db109be14cc9eb266c1e1.bindTooltip(
+                `<div>
+                     Store Name: <b>15th Ave & NW 53rd - Ballard</b><br>Address: 5221 15th Ave NW, Seattle, WA 98107<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a542c7bc9b924507e52d33106aeace56 = L.marker(
+                [47.668564, -122.37439],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_6bd62d6e96cb542bd0c31ce5a661a394 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_a542c7bc9b924507e52d33106aeace56.setIcon(icon_6bd62d6e96cb542bd0c31ce5a661a394);
+        
+    
+            marker_a542c7bc9b924507e52d33106aeace56.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Seattle #1477</b><br>Address: 1423 NW Market St, Seattle, WA 98107<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d037d458c32c6121c584e0bf8ca411a6 = L.marker(
+                [47.564283, -122.377043],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_dd38f032cc6eec07bfb376790b863835 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d037d458c32c6121c584e0bf8ca411a6.setIcon(icon_dd38f032cc6eec07bfb376790b863835);
+        
+    
+            marker_d037d458c32c6121c584e0bf8ca411a6.bindTooltip(
+                `<div>
+                     Store Name: <b>35th & Fauntleroy</b><br>Address: 4408 Fauntleroy Way SW, Seattle, WA 98126<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2be8e3b46699835d23855d0483930dd9 = L.marker(
+                [47.660595, -122.36859],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_2ae1fedc3318320fce3ac7ca30e7fd9c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_2be8e3b46699835d23855d0483930dd9.setIcon(icon_2ae1fedc3318320fce3ac7ca30e7fd9c);
+        
+    
+            marker_2be8e3b46699835d23855d0483930dd9.bindTooltip(
+                `<div>
+                     Store Name: <b>Fred Meyer Ballard #608</b><br>Address:  915 NW 45th St, Seattle, WA 98107<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_577debad05abf2c77a5b6e932e20e748 = L.marker(
+                [47.54463, -122.387521],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_38811370d6212ab77805c3249068f0fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_577debad05abf2c77a5b6e932e20e748.setIcon(icon_38811370d6212ab77805c3249068f0fe);
+        
+    
+            marker_577debad05abf2c77a5b6e932e20e748.bindTooltip(
+                `<div>
+                     Store Name: <b>California & Fauntleroy</b><br>Address: 6501 California Ave, Seattle, WA 98136<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68761412d8687e13106edd4c4a68aa61 = L.marker(
+                [47.623776, -122.357803],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_ba7224398b029c4b1e8b7f3c298fd5f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_68761412d8687e13106edd4c4a68aa61.setIcon(icon_ba7224398b029c4b1e8b7f3c298fd5f4);
+        
+    
+            marker_68761412d8687e13106edd4c4a68aa61.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-Seattle #1885</b><br>Address: 516 1st Ave W, Elliott Hotel, Seattle, WA 98119<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_36143086fdc63ae53f38fa6aad5f02a0 = L.marker(
+                [47.622934, -122.356908],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_3fd5c816c83831d7f2082e6c2304155f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_36143086fdc63ae53f38fa6aad5f02a0.setIcon(icon_3fd5c816c83831d7f2082e6c2304155f);
+        
+    
+            marker_36143086fdc63ae53f38fa6aad5f02a0.bindTooltip(
+                `<div>
+                     Store Name: <b>Queen Anne Ave N</b><br>Address: 425 Queen Anne Avenue N, Seattle, WA 98109<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_412ac94f84d0f09795f2490a921d60be = L.marker(
+                [47.69018, -122.376189],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_98dcdb3f0310f1aebe0316186d52e75f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_412ac94f84d0f09795f2490a921d60be.setIcon(icon_98dcdb3f0310f1aebe0316186d52e75f);
+        
+    
+            marker_412ac94f84d0f09795f2490a921d60be.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Seattle #1143</b><br>Address: 8340 15th Ave NW, Seattle, WA 98117<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fd4182d94f9a6060eaec2301ab356c65 = L.marker(
+                [47.638249, -122.357156],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_f1df6f1e003cfe4b5ba31e85abae5fb3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fd4182d94f9a6060eaec2301ab356c65.setIcon(icon_f1df6f1e003cfe4b5ba31e85abae5fb3);
+        
+    
+            marker_fd4182d94f9a6060eaec2301ab356c65.bindTooltip(
+                `<div>
+                     Store Name: <b>Queen Anne</b><br>Address: 2135 Queen Anne Ave N, Seattle, WA 98109<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3820ba3e8889d1fb6762a58e02f1e167 = L.marker(
+                [47.637724, -122.35628],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_46d1a87c1439e59855ce042837b5896f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_3820ba3e8889d1fb6762a58e02f1e167.setIcon(icon_46d1a87c1439e59855ce042837b5896f);
+        
+    
+            marker_3820ba3e8889d1fb6762a58e02f1e167.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Upper Queen Anne #368</b><br>Address: 2100 Queen Anne Ave N, Seattle, WA 98109<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4bee16f3dca19cacda4f048f1213f73f = L.marker(
+                [47.621052, -122.350799],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_928de2081c5eecdc80a13e6b690815a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4bee16f3dca19cacda4f048f1213f73f.setIcon(icon_928de2081c5eecdc80a13e6b690815a5);
+        
+    
+            marker_4bee16f3dca19cacda4f048f1213f73f.bindTooltip(
+                `<div>
+                     Store Name: <b>Seattle Center</b><br>Address: 305 Harrison Street, Suite 220, Colman Building, Seattle, WA 98109<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0cf924c883e904973a0c8fe6cb5fc082 = L.marker(
+                [47.624725, -122.347263],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_b841bae505a764ed082a66994e91a6ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_0cf924c883e904973a0c8fe6cb5fc082.setIcon(icon_b841bae505a764ed082a66994e91a6ce);
+        
+    
+            marker_0cf924c883e904973a0c8fe6cb5fc082.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - Seattle/Uptown #881</b><br>Address: 500 Mercer Avenue, Seattle, WA 98109<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea0308bd026b5eab41c1f30c68aef23c = L.marker(
+                [47.649834, -122.350135],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_af808b4a4e91bd2d286e602c24ed45a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ea0308bd026b5eab41c1f30c68aef23c.setIcon(icon_af808b4a4e91bd2d286e602c24ed45a8);
+        
+    
+            marker_ea0308bd026b5eab41c1f30c68aef23c.bindTooltip(
+                `<div>
+                     Store Name: <b>Fremont Ave</b><br>Address: 3401 Fremont Avenue N, 3401, Seattle, WA 98103<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_832120de2059c02ce6490674a66dfaa6 = L.marker(
+                [47.61255, -122.342777],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_e8d8f6ea9d941d41058bf10000a36a17 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_832120de2059c02ce6490674a66dfaa6.setIcon(icon_e8d8f6ea9d941d41058bf10000a36a17);
+        
+    
+            marker_832120de2059c02ce6490674a66dfaa6.bindTooltip(
+                `<div>
+                     Store Name: <b>2nd & Lenora</b><br>Address: 211 Lenora, Seattle, WA 98121<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f2ddaebfe1fc183dadb2d117aaf4d7b = L.marker(
+                [47.610047, -122.342591],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_9c45f2b66109b837af8ea72ffdc68ed6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8f2ddaebfe1fc183dadb2d117aaf4d7b.setIcon(icon_9c45f2b66109b837af8ea72ffdc68ed6);
+        
+    
+            marker_8f2ddaebfe1fc183dadb2d117aaf4d7b.bindTooltip(
+                `<div>
+                     Store Name: <b>Pike Place</b><br>Address: 1912 Pike Place, Seattle, WA 98181<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c4c4060f9d3fa8ca22675aa516ccf16c = L.marker(
+                [47.520752, -122.268209],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_06b5ec904df6dd79a8a7d62f37bbd7ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_c4c4060f9d3fa8ca22675aa516ccf16c.setIcon(icon_06b5ec904df6dd79a8a7d62f37bbd7ee);
+        
+    
+            marker_c4c4060f9d3fa8ca22675aa516ccf16c.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-Seattle #1965</b><br>Address: 9262 Rainier Ave S, Seattle, WA 98118<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef060aac97db7c61ca0476cd6f50b416 = L.marker(
+                [47.537471, -122.283071],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_d465b72e759b70106fff58efb3912b8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_ef060aac97db7c61ca0476cd6f50b416.setIcon(icon_d465b72e759b70106fff58efb3912b8a);
+        
+    
+            marker_ef060aac97db7c61ca0476cd6f50b416.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-Seattle #219</b><br>Address: 3900 S Othello St, Seattle, WA 98118<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_739fec8fd293b085ebe3a7f15df728a0 = L.marker(
+                [47.545883, -122.285101],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_131d7c98b00a43aa61ac9795ba885859 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_739fec8fd293b085ebe3a7f15df728a0.setIcon(icon_131d7c98b00a43aa61ac9795ba885859);
+        
+    
+            marker_739fec8fd293b085ebe3a7f15df728a0.bindTooltip(
+                `<div>
+                     Store Name: <b>MLK Way & Graham - Seattle</b><br>Address: 6310 Martin Luther King Jr. Way South, Bank of America Tower, Seattle, WA 98118<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e658dd20f29836738988527dff2ee991 = L.marker(
+                [47.569072, -122.288336],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_62a2c2c6c4adb21ccd6fb6d8ea83009c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_e658dd20f29836738988527dff2ee991.setIcon(icon_62a2c2c6c4adb21ccd6fb6d8ea83009c);
+        
+    
+            marker_e658dd20f29836738988527dff2ee991.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway @ Seattle 1508</b><br>Address: 3820 Rainier Avenue South, First Interstate Center, Seattle, WA 98118<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ff1561b9831defcbb54f4c09fc4f416 = L.marker(
+                [47.579087, -122.299771],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_028b9bcd997eb85e6d4c86cb891bc3d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_3ff1561b9831defcbb54f4c09fc4f416.setIcon(icon_028b9bcd997eb85e6d4c86cb891bc3d3);
+        
+    
+            marker_3ff1561b9831defcbb54f4c09fc4f416.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - Seattle/Rainier #849</b><br>Address: 2707 Rainier Avenue South, Seattle, WA 98144<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_80939e59e22e2ed9ab23ad7c827fceb2 = L.marker(
+                [47.566563, -122.32964],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4dc83b6f14f45cf7dcb2c1b8376d664b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_80939e59e22e2ed9ab23ad7c827fceb2.setIcon(icon_4dc83b6f14f45cf7dcb2c1b8376d664b);
+        
+    
+            marker_80939e59e22e2ed9ab23ad7c827fceb2.bindTooltip(
+                `<div>
+                     Store Name: <b>4th & Diagonal-Seattle</b><br>Address: 4115 4th Avenue S, Seattle, WA 98134<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de31becd014a6d10b98a2c952bdd0ca8 = L.marker(
+                [47.581011, -122.335312],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_3c7ca9e03ff1e4de00ec5644ae2345f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_de31becd014a6d10b98a2c952bdd0ca8.setIcon(icon_3c7ca9e03ff1e4de00ec5644ae2345f9);
+        
+    
+            marker_de31becd014a6d10b98a2c952bdd0ca8.bindTooltip(
+                `<div>
+                     Store Name: <b>Sodo Reserve Store</b><br>Address: 2401 Utah Ave S, Seattle, WA 98134<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_430fbdad7586454ac3fc05aa0a1ad698 = L.marker(
+                [47.522721, -122.365578],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_60b674e73bf014024ea4ddad535f34ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_430fbdad7586454ac3fc05aa0a1ad698.setIcon(icon_60b674e73bf014024ea4ddad535f34ee);
+        
+    
+            marker_430fbdad7586454ac3fc05aa0a1ad698.bindTooltip(
+                `<div>
+                     Store Name: <b>Westwood Village</b><br>Address: 9023 25th Ave SW, Seattle, WA 98126<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1b6267f1f0f16f057f396abaef9824c = L.marker(
+                [47.522047, -122.3687],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_8b26ed335b7cd1cf8014bd3ce04eef96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_b1b6267f1f0f16f057f396abaef9824c.setIcon(icon_8b26ed335b7cd1cf8014bd3ce04eef96);
+        
+    
+            marker_b1b6267f1f0f16f057f396abaef9824c.bindTooltip(
+                `<div>
+                     Store Name: <b>Target Seattle T-637</b><br>Address: 2800 SW Barton St, Seattle, WA 98126<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bb4b3da9bbad8cf828cc87d6b8ea2a92 = L.marker(
+                [47.522233, -122.365665],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_91b58f4fb4c52162d2622a460fb801df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_bb4b3da9bbad8cf828cc87d6b8ea2a92.setIcon(icon_91b58f4fb4c52162d2622a460fb801df);
+        
+    
+            marker_bb4b3da9bbad8cf828cc87d6b8ea2a92.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - West Wood Village #825</b><br>Address: 2500 SW Barton, Seattle, WA 98126<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57531eccc82f9729e37e8d71e4ab48e4 = L.marker(
+                [47.5842, -122.333936],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_b51146bc637c27e8516af063d930f623 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_57531eccc82f9729e37e8d71e4ab48e4.setIcon(icon_b51146bc637c27e8516af063d930f623);
+        
+    
+            marker_57531eccc82f9729e37e8d71e4ab48e4.bindTooltip(
+                `<div>
+                     Store Name: <b>1st & Walker-Seattle</b><br>Address: 1962 1st Ave S., Seattle, WA 98134<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c467b9d63485e55931e945ce87d68e5d = L.marker(
+                [47.546162, -122.325625],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_84b39269e2269694e9c932784b7b411e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c467b9d63485e55931e945ce87d68e5d.setIcon(icon_84b39269e2269694e9c932784b7b411e);
+        
+    
+            marker_c467b9d63485e55931e945ce87d68e5d.bindTooltip(
+                `<div>
+                     Store Name: <b>S Michigan & 6th Ave S</b><br>Address: 601 S Michigan St, Seattle, WA 98108<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_38bf886e4171b0a937a82f2789afd4ab = L.marker(
+                [47.516681, -122.367081],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_446d0342d798172da2ee1f280c75cfd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_38bf886e4171b0a937a82f2789afd4ab.setIcon(icon_446d0342d798172da2ee1f280c75cfd1);
+        
+    
+            marker_38bf886e4171b0a937a82f2789afd4ab.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Seattle #1923</b><br>Address: 9620 28th Ave SW, Seattle, WA 98126<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6486757b81eb29c566b99074c41602cd = L.marker(
+                [47.513851, -122.35493],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_a8d9e067f6cf918386a99e2bd198ca8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6486757b81eb29c566b99074c41602cd.setIcon(icon_a8d9e067f6cf918386a99e2bd198ca8c);
+        
+    
+            marker_6486757b81eb29c566b99074c41602cd.bindTooltip(
+                `<div>
+                     Store Name: <b>White Center - 16th Ave SW & 100 St </b><br>Address:  9862 16th Ave SW, Seattle, WA 98146<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cfaca07dbc1fd30b8c77d843b678573b = L.marker(
+                [47.597655, -122.328288],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_74bb6d48059101bf5dc95a11e1052c23 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_cfaca07dbc1fd30b8c77d843b678573b.setIcon(icon_74bb6d48059101bf5dc95a11e1052c23);
+        
+    
+            marker_cfaca07dbc1fd30b8c77d843b678573b.bindTooltip(
+                `<div>
+                     Store Name: <b>505 Union Stn</b><br>Address: 505 5th Ave South, Seattle, WA 98104<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8fbcd303e3e1fa11de9b576ca86f4f1e = L.marker(
+                [47.604867, -122.339712],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_e93bf5fd509b1271015ff54fc27ca395 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8fbcd303e3e1fa11de9b576ca86f4f1e.setIcon(icon_e93bf5fd509b1271015ff54fc27ca395);
+        
+    
+            marker_8fbcd303e3e1fa11de9b576ca86f4f1e.bindTooltip(
+                `<div>
+                     Store Name: <b>Pier 55</b><br>Address: 1101 Alaskan Way, 102, Seattle, WA 98104<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_641e2609a8e5e6d3383b3a0a6545176a = L.marker(
+                [47.606964, -122.338504],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_32d1ed4a05def1d3511cffc45c83a33b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_641e2609a8e5e6d3383b3a0a6545176a.setIcon(icon_32d1ed4a05def1d3511cffc45c83a33b);
+        
+    
+            marker_641e2609a8e5e6d3383b3a0a6545176a.bindTooltip(
+                `<div>
+                     Store Name: <b>Pickup - 1st & University</b><br>Address: 1305 1st Ave, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a6a7c3d21f81723b32e7d944d4386815 = L.marker(
+                [47.605286, -122.33437],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_14b0496951fb99f72c488384401242af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a6a7c3d21f81723b32e7d944d4386815.setIcon(icon_14b0496951fb99f72c488384401242af);
+        
+    
+            marker_a6a7c3d21f81723b32e7d944d4386815.bindTooltip(
+                `<div>
+                     Store Name: <b>3rd & Madison</b><br>Address: 999 Third Avenue, Seattle, WA 98104<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bd74bb7da4dacd1cbed2604e984e273a = L.marker(
+                [47.604277, -122.330674],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_23e8b325f03b1109f6bc3621a39ca849 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bd74bb7da4dacd1cbed2604e984e273a.setIcon(icon_23e8b325f03b1109f6bc3621a39ca849);
+        
+    
+            marker_bd74bb7da4dacd1cbed2604e984e273a.bindTooltip(
+                `<div>
+                     Store Name: <b>Columbia Center</b><br>Address: 701 Fifth Avenue, Seattle, WA 98104<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6b1001286aa79284d7f08572616f43cb = L.marker(
+                [47.608378, -122.338441],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_1ac8b87a0c11e06703c8fc107ea18f64 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_6b1001286aa79284d7f08572616f43cb.setIcon(icon_1ac8b87a0c11e06703c8fc107ea18f64);
+        
+    
+            marker_6b1001286aa79284d7f08572616f43cb.bindTooltip(
+                `<div>
+                     Store Name: <b>Target Seattle Downtown T-2786</b><br>Address: 1401 2nd Ave, Seattle, WA 98101<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1610371b5a1385ef22918358dbee8e04 = L.marker(
+                [47.609052, -122.339908],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_dedc1057e8e837249cd1283ce60f6005 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1610371b5a1385ef22918358dbee8e04.setIcon(icon_dedc1057e8e837249cd1283ce60f6005);
+        
+    
+            marker_1610371b5a1385ef22918358dbee8e04.bindTooltip(
+                `<div>
+                     Store Name: <b>1st & Pike-Seattle</b><br>Address: 102 Pike St, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_847400562811245fae9df0f88e7ec99a = L.marker(
+                [47.607302, -122.33589],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_22f4f5063eac8b7351f4861dd66f1c45 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_847400562811245fae9df0f88e7ec99a.setIcon(icon_22f4f5063eac8b7351f4861dd66f1c45);
+        
+    
+            marker_847400562811245fae9df0f88e7ec99a.bindTooltip(
+                `<div>
+                     Store Name: <b>3rd & Seneca</b><br>Address: 1201 3rd Ave, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1eb9bf2b4932c44982cb58d4340e8b9a = L.marker(
+                [47.607343, -122.334254],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4c1650d82e40a11f298f03a66c26316b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1eb9bf2b4932c44982cb58d4340e8b9a.setIcon(icon_4c1650d82e40a11f298f03a66c26316b);
+        
+    
+            marker_1eb9bf2b4932c44982cb58d4340e8b9a.bindTooltip(
+                `<div>
+                     Store Name: <b>4th & Seneca</b><br>Address: 1125 4th Avenue, Seattle, WA 98161<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_55ace32488d821797a6ef549eb7959a1 = L.marker(
+                [47.605341, -122.330419],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_6911dd625d3ee1f4af4caa3991d2fb5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_55ace32488d821797a6ef549eb7959a1.setIcon(icon_6911dd625d3ee1f4af4caa3991d2fb5c);
+        
+    
+            marker_55ace32488d821797a6ef549eb7959a1.bindTooltip(
+                `<div>
+                     Store Name: <b>5th & Columbia - Seattle</b><br>Address: 800 5th Ave, L901, Seattle, WA 98144<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d8df0462cb12964929a6b5d77f81e443 = L.marker(
+                [47.610562, -122.335627],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_8c5b5bcc25bbe6fbdd879c7a829eedf7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d8df0462cb12964929a6b5d77f81e443.setIcon(icon_8c5b5bcc25bbe6fbdd879c7a829eedf7);
+        
+    
+            marker_d8df0462cb12964929a6b5d77f81e443.bindTooltip(
+                `<div>
+                     Store Name: <b>5th Ave & Pike St</b><br>Address: 425 Pike St, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3bc6ddc66bb9c71b25047cec9abdd111 = L.marker(
+                [47.611517, -122.337329],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_af906fa4ecca839b1af81627314e4734 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3bc6ddc66bb9c71b25047cec9abdd111.setIcon(icon_af906fa4ecca839b1af81627314e4734);
+        
+    
+            marker_3bc6ddc66bb9c71b25047cec9abdd111.bindTooltip(
+                `<div>
+                     Store Name: <b>Westlake Center</b><br>Address: 400 Pine Street, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e501d582e44642b3d7ff423e6fdc3fa4 = L.marker(
+                [47.610154, -122.333077],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_e91dfba8c7df2075e4602d88f24f9289 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e501d582e44642b3d7ff423e6fdc3fa4.setIcon(icon_e91dfba8c7df2075e4602d88f24f9289);
+        
+    
+            marker_e501d582e44642b3d7ff423e6fdc3fa4.bindTooltip(
+                `<div>
+                     Store Name: <b>Two Union Square</b><br>Address: 601 Union Street, 224B, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0d532cf6da33db151ba1818a5d15357 = L.marker(
+                [47.610587, -122.333517],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_7676ecf3c92ac2e693e07da7e8f40189 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_e0d532cf6da33db151ba1818a5d15357.setIcon(icon_7676ecf3c92ac2e693e07da7e8f40189);
+        
+    
+            marker_e0d532cf6da33db151ba1818a5d15357.bindTooltip(
+                `<div>
+                     Store Name: <b>Sheraton Grand Lobby</b><br>Address: 1730 Minor Ave, Seattle, WA 98101<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_13d4ee5b2cbf9d48dec0558dce82454c = L.marker(
+                [47.612235, -122.333778],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4290af7ea366d22b9345d4526b5ca597 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_13d4ee5b2cbf9d48dec0558dce82454c.setIcon(icon_4290af7ea366d22b9345d4526b5ca597);
+        
+    
+            marker_13d4ee5b2cbf9d48dec0558dce82454c.bindTooltip(
+                `<div>
+                     Store Name: <b>7th & Pike - Seattle</b><br>Address: 1524 7th Ave, Seattle-Tacoma International Airport, Seattle, WA 98191<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f1742fd46767d3eeb03b7e7b5219d6a = L.marker(
+                [47.61524, -122.338136],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_fac5f00f3c0c4401cc06980b7e506f39 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8f1742fd46767d3eeb03b7e7b5219d6a.setIcon(icon_fac5f00f3c0c4401cc06980b7e506f39);
+        
+    
+            marker_8f1742fd46767d3eeb03b7e7b5219d6a.bindTooltip(
+                `<div>
+                     Store Name: <b>7th & Westlake - Seattle</b><br>Address: 2011 7th Ave, R2, Seattle-Tacoma International Airport, Seattle, WA 98121<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_282c432bbd5fcc517e008fa27dd29696 = L.marker(
+                [47.614325, -122.335865],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_d1775f07b822f9d4cd972f5eca9fe654 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_282c432bbd5fcc517e008fa27dd29696.setIcon(icon_d1775f07b822f9d4cd972f5eca9fe654);
+        
+    
+            marker_282c432bbd5fcc517e008fa27dd29696.bindTooltip(
+                `<div>
+                     Store Name: <b>1700 Seventh Ave</b><br>Address: 1700 Seventh Ave, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_338189a640573518e33cc1f672314929 = L.marker(
+                [47.609578, -122.324192],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_185c7a83df71c9c2b39e0e1ef872a914 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_338189a640573518e33cc1f672314929.setIcon(icon_185c7a83df71c9c2b39e0e1ef872a914);
+        
+    
+            marker_338189a640573518e33cc1f672314929.bindTooltip(
+                `<div>
+                     Store Name: <b>1101 Madison St</b><br>Address: 1101 Madison Street, Seattle, WA 98122<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e13808dff02614537960b34d7539f4fb = L.marker(
+                [47.608157, -122.321636],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_ccd4508624012cfc74901e75e4a89d42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_e13808dff02614537960b34d7539f4fb.setIcon(icon_ccd4508624012cfc74901e75e4a89d42);
+        
+    
+            marker_e13808dff02614537960b34d7539f4fb.bindTooltip(
+                `<div>
+                     Store Name: <b>Swedish Orthopedic Institute</b><br>Address: 601 Broadway, Seattle, WA 98122<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fe114fd6648a70ca089765afae7c55e8 = L.marker(
+                [47.608737, -122.321659],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_9a3ba93a41e08403cc1328c033271bd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_fe114fd6648a70ca089765afae7c55e8.setIcon(icon_9a3ba93a41e08403cc1328c033271bd4);
+        
+    
+            marker_fe114fd6648a70ca089765afae7c55e8.bindTooltip(
+                `<div>
+                     Store Name: <b>Swedish First Hill Lobby</b><br>Address: 747 Broadway, Seattle, WA 98122<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_575062054bcc59b3153bbeb8cd461343 = L.marker(
+                [47.614008, -122.328112],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_17f8f9a8206d877d4eebbe2c60dc6351 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_575062054bcc59b3153bbeb8cd461343.setIcon(icon_17f8f9a8206d877d4eebbe2c60dc6351);
+        
+    
+            marker_575062054bcc59b3153bbeb8cd461343.bindTooltip(
+                `<div>
+                     Store Name: <b>Pike Street Roastery</b><br>Address: 1124 Pike St, Seattle, WA 98101<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a097b60e5f4add658c62f822ca795781 = L.marker(
+                [47.609367, -122.316572],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_889b45b2f5544b4d8b40659890154fa8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a097b60e5f4add658c62f822ca795781.setIcon(icon_889b45b2f5544b4d8b40659890154fa8);
+        
+    
+            marker_a097b60e5f4add658c62f822ca795781.bindTooltip(
+                `<div>
+                     Store Name: <b>12th & Columbia</b><br>Address: 800 12th Ave, 2200 Westlake Avenue, Seattle, WA 98122<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4f684484c6c247c0c3e11ee69587efee = L.marker(
+                [47.617158, -122.329799],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_5692e8446f945f5f1f1b5c2eec3a7aa1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4f684484c6c247c0c3e11ee69587efee.setIcon(icon_5692e8446f945f5f1f1b5c2eec3a7aa1);
+        
+    
+            marker_4f684484c6c247c0c3e11ee69587efee.bindTooltip(
+                `<div>
+                     Store Name: <b>Metropolitan Park East</b><br>Address: nan<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_604766027e37f06890726282cd00b93b = L.marker(
+                [47.599433, -122.301982],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_f2783631ee857294cd1ba1cfaa1da1f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_604766027e37f06890726282cd00b93b.setIcon(icon_f2783631ee857294cd1ba1cfaa1da1f4);
+        
+    
+            marker_604766027e37f06890726282cd00b93b.bindTooltip(
+                `<div>
+                     Store Name: <b>23rd & Jackson</b><br>Address: 2300 South Jackson, Suite A, Seattle, WA 98144<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2cec2a76ef8619bc8995db7c876f8c25 = L.marker(
+                [47.613838, -122.321193],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_703c269bb1cc94bd146a82266d197f1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_2cec2a76ef8619bc8995db7c876f8c25.setIcon(icon_703c269bb1cc94bd146a82266d197f1f);
+        
+    
+            marker_2cec2a76ef8619bc8995db7c876f8c25.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC Harvard Market #847</b><br>Address: 1401 Broadway, Seattle, WA 98122<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53d6065e9d1db484d80973c5ba0cbe62 = L.marker(
+                [47.60719, -122.309915],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_def70927147ed429c2d1183fb31bc156 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_53d6065e9d1db484d80973c5ba0cbe62.setIcon(icon_def70927147ed429c2d1183fb31bc156);
+        
+    
+            marker_53d6065e9d1db484d80973c5ba0cbe62.bindTooltip(
+                `<div>
+                     Store Name: <b>James Tower</b><br>Address: 550 17th Ave, Seattle, WA 98122<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_be5cb7043e1260f0c606967fb7db36b1 = L.marker(
+                [47.634097, -122.280829],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_faf13684df22513e35f66718febe3169 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_be5cb7043e1260f0c606967fb7db36b1.setIcon(icon_faf13684df22513e35f66718febe3169);
+        
+    
+            marker_be5cb7043e1260f0c606967fb7db36b1.bindTooltip(
+                `<div>
+                     Store Name: <b>Madison Park</b><br>Address: 4000 East Madison St, Seattle, WA 98112<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e35104e1d5c29d67cc6a97a86f8486e5 = L.marker(
+                [47.662275, -122.280932],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_aea9e8956ba6c08e69e680bc39d3bcc4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e35104e1d5c29d67cc6a97a86f8486e5.setIcon(icon_aea9e8956ba6c08e69e680bc39d3bcc4);
+        
+    
+            marker_e35104e1d5c29d67cc6a97a86f8486e5.bindTooltip(
+                `<div>
+                     Store Name: <b>Secure Access SCH Ocean</b><br>Address: 4800 Sand Point Way, NE, Seattle, WA 98105<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b9dbd36d48a1428894d94b2530e75e4d = L.marker(
+                [47.663162, -122.282738],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_44bb09bf3c307d5d221ee6f5ce42a3c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b9dbd36d48a1428894d94b2530e75e4d.setIcon(icon_44bb09bf3c307d5d221ee6f5ce42a3c9);
+        
+    
+            marker_b9dbd36d48a1428894d94b2530e75e4d.bindTooltip(
+                `<div>
+                     Store Name: <b>Secure Access SCH River-Floor</b><br>Address: 4800 Sand Point Way, NE, Seattle, WA 98105<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5dfab0bcee36b9c49e4101a5c996b39b = L.marker(
+                [47.602082, -122.285387],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_5cac77352855f31731d9a7d61b3355ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5dfab0bcee36b9c49e4101a5c996b39b.setIcon(icon_5cac77352855f31731d9a7d61b3355ff);
+        
+    
+            marker_5dfab0bcee36b9c49e4101a5c996b39b.bindTooltip(
+                `<div>
+                     Store Name: <b>Leschi</b><br>Address: 121 Lakeside Ave, Ste F, Seattle, WA 98122<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3c952138c01f41d12d0a9d642b087aee = L.marker(
+                [47.662475, -122.296762],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_ad8301c1b544f18409aab9290b36a6f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_3c952138c01f41d12d0a9d642b087aee.setIcon(icon_ad8301c1b544f18409aab9290b36a6f4);
+        
+    
+            marker_3c952138c01f41d12d0a9d642b087aee.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - University Village #807</b><br>Address: 2746 NE 45th Street, Seattle, WA 98105<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dc337a46370e7f6e6cddec67d478fb58 = L.marker(
+                [47.617997, -122.30353],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_989d683e959853f0ed5a44797355e7c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_dc337a46370e7f6e6cddec67d478fb58.setIcon(icon_989d683e959853f0ed5a44797355e7c4);
+        
+    
+            marker_dc337a46370e7f6e6cddec67d478fb58.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Seattle #1993</b><br>Address: 2201 E Madison, Seattle, WA 98122<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f1b0bd772c96062643ca990c388c1449 = L.marker(
+                [47.661662, -122.29936],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_67790c616fecb526e1ea63afe6ee7d74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f1b0bd772c96062643ca990c388c1449.setIcon(icon_67790c616fecb526e1ea63afe6ee7d74);
+        
+    
+            marker_f1b0bd772c96062643ca990c388c1449.bindTooltip(
+                `<div>
+                     Store Name: <b>University Village South</b><br>Address: 2617 NE 46th St, (new address is across the street), Seattle, WA 98105<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b487f52cce764e842994cbc570c2528f = L.marker(
+                [47.733578, -122.313112],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_52a2f1304fa7817138ed5959720f2381 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b487f52cce764e842994cbc570c2528f.setIcon(icon_52a2f1304fa7817138ed5959720f2381);
+        
+    
+            marker_b487f52cce764e842994cbc570c2528f.bindTooltip(
+                `<div>
+                     Store Name: <b>145th & 15th</b><br>Address: 14359 15th Avenue NE, Seattle-Tacoma International Airport, Seattle, WA 98125<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_023feb51ac766aa884f34b577ddad06a = L.marker(
+                [47.732951, -122.291903],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_9711a282efee557d0b11e5035c127a07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_023feb51ac766aa884f34b577ddad06a.setIcon(icon_9711a282efee557d0b11e5035c127a07);
+        
+    
+            marker_023feb51ac766aa884f34b577ddad06a.bindTooltip(
+                `<div>
+                     Store Name: <b>145th and Lake City Way</b><br>Address: 14330 Lake City Way NE, Seattle, WA 98125<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f2ce85cf35a4d5c9584ffaaec529bf4c = L.marker(
+                [47.733364, -122.310633],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4d12a30d520046f14d8966ce42505379 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_f2ce85cf35a4d5c9584ffaaec529bf4c.setIcon(icon_4d12a30d520046f14d8966ce42505379);
+        
+    
+            marker_f2ce85cf35a4d5c9584ffaaec529bf4c.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - North Seattle #858</b><br>Address: 1531 NE 145th St. Seattle, WA 98155<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ee5c319607fbb5bb59091cd9d39f505 = L.marker(
+                [47.718001, -122.311984],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_66af398bfd93a74829b13fdf40588b20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_5ee5c319607fbb5bb59091cd9d39f505.setIcon(icon_66af398bfd93a74829b13fdf40588b20);
+        
+    
+            marker_5ee5c319607fbb5bb59091cd9d39f505.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-Seattle #1586</b><br>Address: 12318 15th Ave NE, Seattle, WA 98125<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6fb5f651ba9147d116fc5ede8ce05829 = L.marker(
+                [47.709137, -122.31748],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4646986f0dfe2712ab198af53ebde7ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_6fb5f651ba9147d116fc5ede8ce05829.setIcon(icon_4646986f0dfe2712ab198af53ebde7ba);
+        
+    
+            marker_6fb5f651ba9147d116fc5ede8ce05829.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - Northgate #866</b><br>Address: 11100 Roosevelt Way NE, Seattle, WA 98125<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b29c05f52b97536fce907ea959deeaa = L.marker(
+                [47.715983, -122.297558],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_b1cbdaf365402449aa0828940e86b4c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3b29c05f52b97536fce907ea959deeaa.setIcon(icon_b1cbdaf365402449aa0828940e86b4c9);
+        
+    
+            marker_3b29c05f52b97536fce907ea959deeaa.bindTooltip(
+                `<div>
+                     Store Name: <b>Lake City Way & 120th</b><br>Address: 12001 Lake City Way NE, Seattle, WA 98125<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1063fec67d8bb2071c2d19b580b2646d = L.marker(
+                [47.709062, -122.325428],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_d9f960e66c8e2d7d746c0c5ac6062a0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_1063fec67d8bb2071c2d19b580b2646d.setIcon(icon_d9f960e66c8e2d7d746c0c5ac6062a0f);
+        
+    
+            marker_1063fec67d8bb2071c2d19b580b2646d.bindTooltip(
+                `<div>
+                     Store Name: <b>Target Northgate T-1284</b><br>Address: 302 NE Northgate Way, Seattle, WA 98125<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8f5f1b187cdeb47990f42ec8e68f32cb = L.marker(
+                [47.704564, -122.323861],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_fb5125078eeceaca95cf30458320ae3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8f5f1b187cdeb47990f42ec8e68f32cb.setIcon(icon_fb5125078eeceaca95cf30458320ae3a);
+        
+    
+            marker_8f5f1b187cdeb47990f42ec8e68f32cb.bindTooltip(
+                `<div>
+                     Store Name: <b>Kraken Community Iceplex</b><br>Address: 10601 5th Ave NE, Seattle, WA 98125<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dca2b4b507bd946edc5a9d2a4ccc4559 = L.marker(
+                [47.708247, -122.332105],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_b32903dfbe18c85f5a85327bab540211 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dca2b4b507bd946edc5a9d2a4ccc4559.setIcon(icon_b32903dfbe18c85f5a85327bab540211);
+        
+    
+            marker_dca2b4b507bd946edc5a9d2a4ccc4559.bindTooltip(
+                `<div>
+                     Store Name: <b>Northgate Way</b><br>Address: 2137  North Northgate Way, Seattle, WA 98133<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78b0c745afe8138253a734dd3417f530 = L.marker(
+                [47.714057, -122.337051],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_f1017acdf0a9b824d402b1879fbc8ce8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_78b0c745afe8138253a734dd3417f530.setIcon(icon_f1017acdf0a9b824d402b1879fbc8ce8);
+        
+    
+            marker_78b0c745afe8138253a734dd3417f530.bindTooltip(
+                `<div>
+                     Store Name: <b>Northwest Hospital & Medical Ctr Lo</b><br>Address: 1550 North 115th St, Westwood Village, Seattle, WA 98133<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_067a4378352d3df614309bd4e0977ae8 = L.marker(
+                [47.724335, -122.345499],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4a543d1f5c2f270125ae32a00133834e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_067a4378352d3df614309bd4e0977ae8.setIcon(icon_4a543d1f5c2f270125ae32a00133834e);
+        
+    
+            marker_067a4378352d3df614309bd4e0977ae8.bindTooltip(
+                `<div>
+                     Store Name: <b>130th & Aurora</b><br>Address: 13025 Aurora Avenue North, Seattle, WA 98133<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_57e037678612b48bc524b450088e0977 = L.marker(
+                [47.682071, -122.316828],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_dc2eb137f4429184344a03c344da1e98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_57e037678612b48bc524b450088e0977.setIcon(icon_dc2eb137f4429184344a03c344da1e98);
+        
+    
+            marker_57e037678612b48bc524b450088e0977.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway - Seattle #1550</b><br>Address: 7300 Roosevelt Way NE, Seattle, WA 98115<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c86db10b738c10ffa063da54e3b545a = L.marker(
+                [47.689479, -122.344838],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_e8e951582273a2900849e233845dc721 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7c86db10b738c10ffa063da54e3b545a.setIcon(icon_e8e951582273a2900849e233845dc721);
+        
+    
+            marker_7c86db10b738c10ffa063da54e3b545a.bindTooltip(
+                `<div>
+                     Store Name: <b>83rd & Aurora</b><br>Address: 8301 Aurora Ave. N, Seattle, WA 98113<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1988fa442eafae46c4f1a2832d910ba0 = L.marker(
+                [47.682534, -122.289408],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_b89a4d5529f0892e16fafd752817544c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_1988fa442eafae46c4f1a2832d910ba0.setIcon(icon_b89a4d5529f0892e16fafd752817544c);
+        
+    
+            marker_1988fa442eafae46c4f1a2832d910ba0.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-Seattle #423</b><br>Address: 7340 35th Ave NE, Seattle, WA 98115<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f78056464cab65da6fce04375349541b = L.marker(
+                [47.701661, -122.36397],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_d7c6ff4a4e4bed56b3816ef298b84e91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f78056464cab65da6fce04375349541b.setIcon(icon_d7c6ff4a4e4bed56b3816ef298b84e91);
+        
+    
+            marker_f78056464cab65da6fce04375349541b.bindTooltip(
+                `<div>
+                     Store Name: <b>Holman Road</b><br>Address: 9999 Holman Rd NW, Seattle, WA 98117<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_39eec2521b42c64107efafd4c1500e65 = L.marker(
+                [47.680009, -122.325529],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_ac549a5b36a75cf4ce06ed6c66bead6f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_39eec2521b42c64107efafd4c1500e65.setIcon(icon_ac549a5b36a75cf4ce06ed6c66bead6f);
+        
+    
+            marker_39eec2521b42c64107efafd4c1500e65.bindTooltip(
+                `<div>
+                     Store Name: <b>Greenlake</b><br>Address: 7100 E Greenlake Drive N, Westlake Center Mall, Seattle, WA 98115<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c2bfcafb0f81acf0df02a272e4b55c6 = L.marker(
+                [47.681397, -122.290638],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_8546a602740a4e5dfa4265e5f3086629 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2c2bfcafb0f81acf0df02a272e4b55c6.setIcon(icon_8546a602740a4e5dfa4265e5f3086629);
+        
+    
+            marker_2c2bfcafb0f81acf0df02a272e4b55c6.bindTooltip(
+                `<div>
+                     Store Name: <b>35th and 73rd-Wedgwood</b><br>Address: 7303 35th Avenue NE, Seattle, WA 98115<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_200d482369ddfb3972107d5fa578344c = L.marker(
+                [47.691979, -122.358696],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_501a366eb617cf4786a2aabbdfd0720d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_200d482369ddfb3972107d5fa578344c.setIcon(icon_501a366eb617cf4786a2aabbdfd0720d);
+        
+    
+            marker_200d482369ddfb3972107d5fa578344c.bindTooltip(
+                `<div>
+                     Store Name: <b>Fred Meyer-Seattle #122</b><br>Address: 100 NW 85th Ave, Seattle, WA 98117<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_860aed1c8276e2cecbdacc4fa2e46bc3 = L.marker(
+                [47.675689, -122.316392],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_136a3411a43a9189d55d52472c012ab3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_860aed1c8276e2cecbdacc4fa2e46bc3.setIcon(icon_136a3411a43a9189d55d52472c012ab3);
+        
+    
+            marker_860aed1c8276e2cecbdacc4fa2e46bc3.bindTooltip(
+                `<div>
+                     Store Name: <b>Roosevelt Square</b><br>Address: 6417 Roosevelt Way NE, Seattle, WA 98015<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_026ce5f01f660e9d3190e39644f9710a = L.marker(
+                [47.664405, -122.29897],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_7554c7b108d0828f6d919aa9b360f6ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_026ce5f01f660e9d3190e39644f9710a.setIcon(icon_7554c7b108d0828f6d919aa9b360f6ff);
+        
+    
+            marker_026ce5f01f660e9d3190e39644f9710a.bindTooltip(
+                `<div>
+                     Store Name: <b>University Village North</b><br>Address: 2650 NE 49th ST, Seattle, WA 98105<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d103ca9bf8c2988158549f22c5a28b7b = L.marker(
+                [47.662687, -122.299743],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_a8d3974d22b5c55fa2ae4b53f9da91a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d103ca9bf8c2988158549f22c5a28b7b.setIcon(icon_a8d3974d22b5c55fa2ae4b53f9da91a1);
+        
+    
+            marker_d103ca9bf8c2988158549f22c5a28b7b.bindTooltip(
+                `<div>
+                     Store Name: <b>University Village</b><br>Address: 4634 26th Avenue NE, Seattle, WA 98105<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61888c4a83563b37863dd62d2a03475d = L.marker(
+                [47.661753, -122.335866],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_a0221837f74d4c5733137499aeacb358 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_61888c4a83563b37863dd62d2a03475d.setIcon(icon_a0221837f74d4c5733137499aeacb358);
+        
+    
+            marker_61888c4a83563b37863dd62d2a03475d.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC - Wallingford #869</b><br>Address: 1801 N 45th St, Seattle, WA 98103<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4cf3e1c64d9b2f0b167235ec8a6c27ee = L.marker(
+                [47.658666, -122.309869],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_a266f35c55baef093f63f89c52cc2d2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_4cf3e1c64d9b2f0b167235ec8a6c27ee.setIcon(icon_a266f35c55baef093f63f89c52cc2d2e);
+        
+    
+            marker_4cf3e1c64d9b2f0b167235ec8a6c27ee.bindTooltip(
+                `<div>
+                     Store Name: <b>UW HFS Mobile Truck</b><br>Address: 1169 NE Campus Pkwy, Seattle, WA 98105<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_331fde0428aecb4195e8ecb86660123e = L.marker(
+                [47.658219, -122.313363],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_33fae835a5fa5b37853bade1e2dd5ee1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_331fde0428aecb4195e8ecb86660123e.setIcon(icon_33fae835a5fa5b37853bade1e2dd5ee1);
+        
+    
+            marker_331fde0428aecb4195e8ecb86660123e.bindTooltip(
+                `<div>
+                     Store Name: <b>4147 University Way Avenue</b><br>Address: 4147 University Way NE, Seattle, WA 98105<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1996dd8d0f498306f190b4246b381a44 = L.marker(
+                [47.655619, -122.308594],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_687ea09fdabd5b92f90a99783e361381 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_1996dd8d0f498306f190b4246b381a44.setIcon(icon_687ea09fdabd5b92f90a99783e361381);
+        
+    
+            marker_1996dd8d0f498306f190b4246b381a44.bindTooltip(
+                `<div>
+                     Store Name: <b>UW Suzzallo Library</b><br>Address: 4001 Stevens Wy NE, Seattle, WA 98195<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21176395deffc4a63c275e007e7eda66 = L.marker(
+                [47.654891, -122.305387],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_e1fa16969c80ee2480dd30626a0a9bac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_21176395deffc4a63c275e007e7eda66.setIcon(icon_e1fa16969c80ee2480dd30626a0a9bac);
+        
+    
+            marker_21176395deffc4a63c275e007e7eda66.bindTooltip(
+                `<div>
+                     Store Name: <b>University of Washington HUB</b><br>Address: 4000 15th Ave NE, Seattle, WA 98105<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3ca32516d870a0124a2e1b4b55d951ff = L.marker(
+                [47.620423, -122.313089],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_231ac1befd505801d9012c81c670ce42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_3ca32516d870a0124a2e1b4b55d951ff.setIcon(icon_231ac1befd505801d9012c81c670ce42);
+        
+    
+            marker_3ca32516d870a0124a2e1b4b55d951ff.bindTooltip(
+                `<div>
+                     Store Name: <b>Safeway-Seattle #1551</b><br>Address: 1410 E John St, Seattle, WA 98112<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5bcf6297ab8ee1a456f1645988bec0d0 = L.marker(
+                [47.618869, -122.321037],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_c1fb303a124c2026caa06b4f824554b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5bcf6297ab8ee1a456f1645988bec0d0.setIcon(icon_c1fb303a124c2026caa06b4f824554b0);
+        
+    
+            marker_5bcf6297ab8ee1a456f1645988bec0d0.bindTooltip(
+                `<div>
+                     Store Name: <b>Broadway & Denny Way</b><br>Address: 101 Broadway East, Seattle, WA 98102<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cecb2e60be57994f7494768b68b1d1b4 = L.marker(
+                [47.62228, -122.321106],
+                {"tags": ["Licensed Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_8b104df5b799258f3ca3e1700bf1865d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cart-shopping", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_cecb2e60be57994f7494768b68b1d1b4.setIcon(icon_8b104df5b799258f3ca3e1700bf1865d);
+        
+    
+            marker_cecb2e60be57994f7494768b68b1d1b4.bindTooltip(
+                `<div>
+                     Store Name: <b>QFC-Seattle/Broadway Mkt #887</b><br>Address: 417 Broadway E, 505 Union Station, Seattle, WA 98102<br>Ownership Type: Licensed Store
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7495926e386cdf04b6f58dfa5221d1ee = L.marker(
+                [47.619378, -122.324963],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_a01010d0a5a712e1af81ede25a1436b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7495926e386cdf04b6f58dfa5221d1ee.setIcon(icon_a01010d0a5a712e1af81ede25a1436b1);
+        
+    
+            marker_7495926e386cdf04b6f58dfa5221d1ee.bindTooltip(
+                `<div>
+                     Store Name: <b>E. Olive Way</b><br>Address: 1600 E Olive Wy, Seattle, WA 98102<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_344b1e5c44af05e9dee7024d35ec468c = L.marker(
+                [47.622767, -122.33668],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_4514d03f0d7acafbb969e75d887e3874 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_344b1e5c44af05e9dee7024d35ec468c.setIcon(icon_4514d03f0d7acafbb969e75d887e3874);
+        
+    
+            marker_344b1e5c44af05e9dee7024d35ec468c.bindTooltip(
+                `<div>
+                     Store Name: <b>Terry & Republican - Seattle</b><br>Address: 442 Terry Ave N, Seattle, WA  98109<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e99ce44b8aea502a7b9c7decb4f3f072 = L.marker(
+                [47.624489, -122.338578],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_26770d63621c0825aa906b022313edd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e99ce44b8aea502a7b9c7decb4f3f072.setIcon(icon_26770d63621c0825aa906b022313edd6);
+        
+    
+            marker_e99ce44b8aea502a7b9c7decb4f3f072.bindTooltip(
+                `<div>
+                     Store Name: <b>Westlake and Mercer</b><br>Address: 515 Westlake Ave N, Seattle, WA 98109<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a43ccee886005907b7f54946e62c1736 = L.marker(
+                [47.629932, -122.340052],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_6641b854967c6c16572a0fac5723ff1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a43ccee886005907b7f54946e62c1736.setIcon(icon_6641b854967c6c16572a0fac5723ff1b);
+        
+    
+            marker_a43ccee886005907b7f54946e62c1736.bindTooltip(
+                `<div>
+                     Store Name: <b>1200 Westlake Ave</b><br>Address: 1200 Westlake Ave N, Seattle, WA 98109<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68b35c614aec90bcd3b746661afc1c7f = L.marker(
+                [47.641026, -122.325669],
+                {"tags": ["Company-Owned Stores"]}
+            ).addTo(marker_cluster_30762474784e3bb04b394e7f97b72370);
+        
+    
+            var icon_830210b613c10abafef7bccde9837d43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "mug-hot", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_68b35c614aec90bcd3b746661afc1c7f.setIcon(icon_830210b613c10abafef7bccde9837d43);
+        
+    
+            marker_68b35c614aec90bcd3b746661afc1c7f.bindTooltip(
+                `<div>
+                     Store Name: <b>2344 Eastlake</b><br>Address: 2344 Eastlake Ave E, Seattle, WA 98102<br>Ownership Type: Company-Owned Stores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+                marker_cluster_30762474784e3bb04b394e7f97b72370.addTo(map_e9ca0aef7a226aa5fe79dc887cb7ebc6);
+    
+            var tag_filter_button_375de3f622c0e42a39f2fec29d00cc08 = L.control.tagFilterButton(
+                {"clearText": "clear", "data": ["Company-Owned Stores", "Licensed Stores"], "filterOnEveryClick": true, "icon": "fa-filter", "openPopupOnHover": false}
+            ).addTo(map_e9ca0aef7a226aa5fe79dc887cb7ebc6);
+        
+</script>
+
+<br>
+This interactive map dynamically visualizes Starbucks locations present across Seattle for distinguishing company-owned and licensed stores through strategically designed icons. Vibrant green coffee mug markers represent company stores, while darker green shopping carts denote licensed (franchise) locations. This considered iconography rapidly conveys ownership types nuances with visual flair. The map is centered on Seattle and utilizes the cartodbpositron tile set for a clean and modern aesthetic. Each marker provides essential information such as store name, address, and ownership type through tooltips, enhancing user engagement. Marker clusters are employed to prevent overcrowding in areas with many stores, ensuring a clear and informative presentation. The Tag Filter feature enables users to toggle between company-owned and licensed stores to help users explore the data. This thoughtful design aims to deliver an intuitive, visually compelling, and informative user experience that brings the data to life. By combining style and substance, the map provides engaging insights into Starbucks' presence across the Emerald City - Seattle.
+</html>
